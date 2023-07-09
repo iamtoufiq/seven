@@ -36,7 +36,7 @@ function DetailPage() {
             <span class="rating-out-of">/ 5</span>
           </div>
           <p class="card-reviews">{destination?.reviews} Reviews</p>
-          <p class="card-price">Ticket Price: ${destination?.ticketPrice}</p>
+          <p class="card-price">Ticket Price: {destination?.ticketPrice}</p>
         </div>
         <a href={destination.website} target="_blank" rel="noopener noreferrer">
           <button> Visit Website</button>
