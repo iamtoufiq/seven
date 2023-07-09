@@ -6,10 +6,12 @@ function ContinentsPage() {
   return (
     <div>
       <h1 className="ContinentsPage-header">Continents</h1>
-      <ul>
+      <ul className="listItems">
         {data.continents.map((continent) => (
-          <li key={continent.id}>
-            <Link to={`/continents/${continent.id}`}>{continent.name}</Link>
+          <li key={continent.id} className="custom-list">
+            <Link to={`/continents/${continent.id}`}>
+              <button>{continent.name}</button>
+            </Link>
           </li>
         ))}
       </ul>

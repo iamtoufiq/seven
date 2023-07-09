@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { data } from "../data";
-
+import "../CSS/content.css";
 function CountriesPage() {
   const { continentId } = useParams();
   const continent = data.continents.find(
@@ -10,11 +10,13 @@ function CountriesPage() {
 
   return (
     <div>
-      <h1>Countries in {continent.name}</h1>
-      <ul>
+      <h1 className="ContinentsPage-header">Countries in {continent.name}</h1>
+      <ul className="listItems">
         {continent.countries.map((country) => (
-          <li key={country.id}>
-            <Link to={`/countries/${country.id}`}>{country.name}</Link>
+          <li key={country.id} style={{ listStyle: "none" }}>
+            <Link to={`/countries/${country.id}`}>
+              <button>{country.name}</button>
+            </Link>
           </li>
         ))}
       </ul>
